@@ -856,6 +856,13 @@ TextlabelLayer = function(
     }
   };
 
+  this.getOpacity = function () {
+    for(var t in textlabels) {
+      return textlabels[t].getOpacity();
+    }
+    return 1;
+  };
+
   this.removeTextlabels = function() {
     var stackWindowFrame = stackWindow.getFrame();
     //! remove old text labels
